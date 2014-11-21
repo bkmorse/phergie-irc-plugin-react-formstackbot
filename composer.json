@@ -2,7 +2,7 @@
     "name": "bkmorse/phergie-irc-plugin-react-formstackbot",
     "type": "library",
     "description": "Phergie IRC bot plugin responding to Who's your *? phrases",
-    "keywords": ["irc","phergie"],
+    "keywords": ["irc","phergie","bot","plugin"],
     "homepage": "https://github.com/bkmorse/phergie-irc-plugin-react-formstackbot",
     "license": "BSD-2-Clause",
     "authors": [
@@ -47,12 +47,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Phergie\\Irc\\Plugin\\React\\FormStackBot\\": "src"
+            "bkmorse\\Phergie\\Irc\\Plugin\\React\\FormStackBot\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Phergie\\Irc\\Tests\\Plugin\\React\\FormStackBot\\": "tests"
+            "bkmorse\\Phergie\\Irc\\Tests\\Plugin\\React\\FormStackBot\\": "tests"
         }
     }
 }

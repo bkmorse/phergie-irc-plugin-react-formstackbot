@@ -7,7 +7,7 @@
  * @license http://phergie.org/license New BSD License
  * @package Phergie\Irc\Plugin\React\Daddy
  */
-namespace Phergie\Irc\Plugin\React\FormStackBot;
+namespace bkmorse\Phergie\Irc\Plugin\React\FormStackBot;
 
 use Phergie\Irc\Bot\React\AbstractPlugin;
 use Phergie\Irc\Bot\React\EventQueue;
@@ -18,7 +18,7 @@ use Phergie\Irc\Event\UserEvent;
  * Plugin for parsing messages
  *
  * @category Phergie
- * @package Phergie\Irc\Plugin\React\Daddy
+ * @package bkmorse\Phergie\Irc\Plugin\React\FormStackBot
  */
 class Plugin extends AbstractPlugin
 {

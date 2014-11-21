@@ -8,17 +8,17 @@
  * @package Phergie\Irc\Plugin\React\Command
  */
 
-namespace Phergie\Irc\Tests\Plugin\React\FormStackBot;
+namespace bkmorse\Phergie\Irc\Tests\Plugin\React\FormStackBot;
 
 use Phergie\Irc\Bot\React\EventQueue;
 use Phergie\Irc\Event\UserEvent;
-use Phergie\Irc\Plugin\React\FormStackBot\Plugin;
+use bkmorse\Phergie\Irc\Plugin\React\FormStackBot\Plugin;
 
 /**
  * Tests for the Plugin class.
  *
  * @category Phergie
- * @package Phergie\Irc\Plugin\React\FormStackBot
+ * @package bkmorse\Phergie\Irc\Plugin\React\FormStackBot
  */
 class PluginTest extends \PHPUnit_Framework_TestCase
 {

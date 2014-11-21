@@ -9,7 +9,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "phergie/phergie-irc-plugin-react-formstackbot": "dev-master"
+        "bkmorse/phergie-irc-plugin-react-formstackbot": "dev-master"
     }
 }
 ```
@@ -19,7 +19,7 @@ See Phergie documentation for more information on installing plugins.
 ## Configuration
 
 ```php
-new \Phergie\Irc\Plugin\React\FormStackBot\Plugin()
+new \bkmorse\Phergie\Irc\Plugin\React\FormStackBot\Plugin()
 ```
 
 ### Usage
