@@ -1,5 +1,5 @@
 {
-    "name": "phergie/phergie-irc-plugin-react-formstackbot",
+    "name": "bkmorse/phergie-irc-plugin-react-formstackbot",
     "type": "library",
     "description": "Phergie IRC bot plugin responding to Who's your *? phrases",
     "keywords": ["irc","phergie"],
