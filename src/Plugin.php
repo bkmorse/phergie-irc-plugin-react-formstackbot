@@ -66,8 +66,6 @@ class Plugin extends AbstractPlugin
         $form_info = $response->getBody();
         $form_json = $response->json();
 
-        // return $form_json["fields"];
-
         foreach($form_json["fields"] as $field):
             $_SESSION['fields'][] = array('id' => $field['id'] ,'name' => $field['name'], 'label' => $field['label']);
         endforeach;
