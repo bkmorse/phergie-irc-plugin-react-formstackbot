@@ -1,6 +1,6 @@
 # phergie/phergie-irc-plugin-react-formstackbot
 
-A plugin for [Phergie](http://github.com/phergie/phergie-irc-bot-react/) to react to phrases like "Who's your *?"
+A plugin for [Phergie](http://github.com/phergie/phergie-irc-bot-react/) to react to users who privately message the bot and ask them to sign up and submit data to formstack.com api"
 
 ## Install
 
@@ -9,7 +9,7 @@ The recommended method of installation is [through composer](http://getcomposer.
 ```JSON
 {
     "require": {
-        "bkmorse/phergie-irc-plugin-react-formstackbot": "dev-master"
+        "phergie/phergie-irc-plugin-react-formstackbot": "dev-master"
     }
 }
 ```
@@ -19,14 +19,19 @@ See Phergie documentation for more information on installing plugins.
 ## Configuration
 
 ```php
-new \bkmorse\Phergie\Irc\Plugin\React\FormStackBot\Plugin()
+new \bkmorse\Phergie\Irc\Plugin\React\FormStackBot\Plugin(array(
+    'prefix' => '!', // string denoting the start of a command
+    'pattern' => '/^!/', // PCRE regular expression denoting the presence of a
+    'nick' => true, // true to match common ways of addressing the bot by its
+                    // connection nick
+    'formstack_form_id' => '1877447', // id of form in formstack.com dashboard
+    'formstack_token'   => 'd85a090da4ad27342529839c68313f1d', // token from when you create an application on formstack.com
+)),
 ```
 
 ### Usage
 
-This plugin monitors `PRIVMSG` events attempting to locate messages like "Who's your *?". When it finds 
-one, it responds to the user who posted the message that they are, in fact, Phergie's *. For example, if IRC user
-"bob" says "Who's my fish monger?", Phergie will respond with "You're my fish monger, bob!"
+This plugin monitors `PRIVMSG` events attempting."
 
 ## Tests
 
@@ -37,7 +42,3 @@ curl -s https://getcomposer.org/installer | php
 php composer.phar install
 ./vendor/bin/phpunit
 ```
-
-## License
-
-Released under the BSD License. See `LICENSE`.

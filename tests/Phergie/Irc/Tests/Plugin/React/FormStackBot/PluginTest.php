@@ -2,7 +2,7 @@
 /**
  * Phergie (http://phergie.org)
  *
- * @link http://github.com/dstockto/phergie-irc-plugin-react-daddy for the canonical source repository
+ * @link http://github.com/bkmorse/phergie-irc-plugin-react-formstackbot for the canonical source repository
  * @copyright Copyright (c) 2008-2014 Phergie Development Team (http://phergie.org)
  * @license http://phergie.org/license New BSD License
  * @package Phergie\Irc\Plugin\React\Command
@@ -54,7 +54,7 @@ class PluginTest extends \PHPUnit_Framework_TestCase
         $queue->expects($this->never())
             ->method('ircPrivmsg');
 
-        $this->assertNull($this->plugin->handleDaddyMessage($event, $queue));
+        $this->assertNull($this->plugin->handlePrivateMessage($event, $queue));
     }
 
     /**
@@ -92,16 +92,12 @@ class PluginTest extends \PHPUnit_Framework_TestCase
             ->method('ircPrivmsg')
             ->with($channel, $expectedResponse);
 
-        $this->plugin->handleDaddyMessage($event, $queue);
+        $this->plugin->handlePrivateMessage($event, $queue);
     }
 
     public function matchingMessageProvider()
     {
-        return [
-            ['bob', '#phergie', "who's your daddy?", "You're my daddy, bob!"],
-            ['ham', '#frpug', "who's your fish monger?", "You're my fish monger, ham!"],
-            ['elazar', '#phergie', "who's ya daddy?", "You're my daddy, elazar!"],
-        ];
+        // return
     }
 
     /**
@@ -136,15 +132,11 @@ class PluginTest extends \PHPUnit_Framework_TestCase
         $queue->expects($this->never())
             ->method('ircPrivmsg');
 
-        $this->plugin->handleDaddyMessage($event, $queue);
+        $this->plugin->handlePrivateMessage($event, $queue);
     }
 
     public function nonMatchingProvider()
     {
-        return [
-            ['I am a little teapot'],
-            ['Who is your daddy and what does he do?'],
-            ['Throw exceptions but never catch them. Says Chuck.']
-        ];
+        // return
     }
 }
