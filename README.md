@@ -24,8 +24,8 @@ new \bkmorse\Phergie\Irc\Plugin\React\FormStackBot\Plugin(array(
     'pattern' => '/^!/', // PCRE regular expression denoting the presence of a
     'nick' => true, // true to match common ways of addressing the bot by its
                     // connection nick
-    'formstack_form_id' => '1877447', // id of form in formstack.com dashboard
-    'formstack_token'   => 'd85a090da4ad27342529839c68313f1d', // token from when you create an application on formstack.com
+    'formstack_form_id' => '', // id of form in formstack.com dashboard
+    'formstack_token'   => '', // token from when you create an application on formstack.com
 )),
 ```
 
