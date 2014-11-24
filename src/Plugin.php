@@ -79,7 +79,7 @@ class Plugin extends AbstractPlugin
     }
 
     // function that is triggered anytime the user privately messages the bot
-    public function     (Event $event, EventQueue $queue)
+    public function handlePrivateMessage(Event $event, EventQueue $queue)
     {
         if ($event instanceof UserEvent) {
             $nick = $event->getNick();
@@ -141,11 +141,11 @@ class Plugin extends AbstractPlugin
 
             if(count($fields) > $_SESSION['index'] && isset($_SESSION['signmeup']))
             {
-                $msg = "Thanks! Now please enter your " . $fields[$_SESSION['index']]['label'];
+                $msg = "index: ".$_SESSION['index']." Thanks! Now please enter your " . $fields[$_SESSION['index']]['label'];
 
                 if($text != "signmeup")
                 {
-                    $_SESSION['user_data']['field_' . $fields[$_SESSION['index']-1]['id']] = $text;
+                    $_SESSION['user_data']['field_' . $fields[$_SESSION['index']-1]['id']] = $text . ' - ' . $_SESSION['index'];
                 }
                 $_SESSION['index']++;
 
@@ -164,6 +164,11 @@ class Plugin extends AbstractPlugin
                     $msg = "Something happened, please try again.";
                 }
 
+                if(isset($_SESSION['user_data'])) 
+                {   
+                    print_r($_SESSION['user_data']);
+                }
+                
                 $this->reset(true);
             }
         }
